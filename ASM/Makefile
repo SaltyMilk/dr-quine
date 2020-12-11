@@ -11,10 +11,11 @@ Grace: Grace.s
 	ld --dynamic-linker /lib/x86_64-linux-gnu/ld-linux-x86-64.so.2 -lc  -o Grace Grace.o
 
 Sully: Sully.s
+	@mkdir SullyChilds
 	nasm -f elf64 Sully.s
-	ld --dynamic-linker /lib/x86_64-linux-gnu/ld-linux-x86-64.so.2 -lc -e main -o Sully Sully.o
+	ld --dynamic-linker /lib/x86_64-linux-gnu/ld-linux-x86-64.so.2 -lc -e main -o SullyChilds/Sully Sully.o
 
 clean:
-	rm -rf *.o Sully_0 Sully_1 Sully_2 Sully_3 Sully_4 Sully_5
+	rm -rf *.o SullyChilds/*.o SullyChilds/Sully_0 SullyChilds/Sully_1 SullyChilds/Sully_2 SullyChilds/Sully_3 SullyChilds/Sully_4 SullyChilds/Sully_5
 fclean: clean
-	rm -rf Colleen Grace Grace_kid.s Sully_* Sully
+	rm -rf Colleen Grace Grace_kid.s SullyChilds

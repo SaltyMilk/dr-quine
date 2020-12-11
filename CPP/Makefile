@@ -8,9 +8,10 @@ Colleen: Colleen.cpp
 Grace: Grace.cpp
 	g++ -Wall -Wextra -Werror Grace.cpp -o Grace
 Sully: Sully.cpp
-	g++ -Wall -Wextra -Werror Sully.cpp -o Sully
+	@mkdir SullyChilds
+	g++ -Wall -Wextra -Werror Sully.cpp -o ./SullyChilds/Sully
 clean:
-	rm -rf Colleen Grace Sully_0 Sully_1 Sully_2 Sully_3 Sully_4 Sully_5
+	rm -rf Colleen Grace SullyChilds/Sully_0 SullyChilds/Sully_1 SullyChilds/Sully_2 SullyChilds/Sully_3 SullyChilds/Sully_4 SullyChilds/Sully_5
 fclean: clean
-	rm -rf Grace_kid.cpp Sully Sully_*.cpp
+	rm -rf Grace_kid.cpp SullyChilds
 

@@ -8,9 +8,10 @@ Colleen: Colleen.c
 Grace: Grace.c
 	gcc -Wall -Wextra -Werror Grace.c -o Grace
 Sully: Sully.c
-	gcc -Wall -Wextra -Werror Sully.c -o Sully
+	mkdir SullyChilds
+	gcc -Wall -Wextra -Werror Sully.c -o ./SullyChilds/Sully
 clean:
-	rm -rf Colleen Grace Sully_0 Sully_1 Sully_2 Sully_3 Sully_4 Sully_5
+	rm -rf Colleen Grace SullyChilds/Sully_0 SullyChilds/Sully_1 SullyChilds/Sully_2 SullyChilds/Sully_3 SullyChilds/Sully_4 SullyChilds/Sully_5
 fclean: clean
-	rm -rf Grace_kid.c Sully Sully_*.c
+	rm -rf Grace_kid.c SullyChilds
 
